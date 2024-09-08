@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: la-machine-commerciale
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: ./out
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
