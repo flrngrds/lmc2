@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ChevronDown, Check } from 'lucide-react'
 
 export default function LandingPage() {
@@ -17,7 +17,7 @@ export default function LandingPage() {
 
   const calendlyLink = "https://calendly.com/lamachinecommerciale/30min"
 
-  const baseStyles = {
+  const baseStyles: Record<string, React.CSSProperties> = {
     container: {
       fontFamily: 'Arial, sans-serif',
       maxWidth: '1200px',
@@ -135,8 +135,52 @@ export default function LandingPage() {
           />
         </section>
 
-        {/* Add more sections here following the same pattern */}
-        
+        <section style={{ marginBottom: '60px' }}>
+          <h2 style={{ ...baseStyles.heroTitle, fontSize: '36px' }}>
+            LES ÉTAPES
+          </h2>
+          <h3 style={{ ...baseStyles.heroText, fontSize: '24px', marginBottom: '40px' }}>
+            Augmentez vos ventes B2B en laissant la technologie gérer votre processus commercial
+          </h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+            {[
+              { title: "01. Création d'une base de prospects", description: "Nous créerons une base de plusieurs milliers d'entreprises et de leurs décisionnaires à contacter." },
+              { title: "02. La prospection par email est automatisée", description: "Les prospects rentrent dans la séquence composée d'un email d'introduction et de 3 à 4 emails de relance." },
+              { title: "03. Les interactions sont enregistrées dans le CRM", description: "Avec La Machine Commerciale, toutes les interactions seront enregistrées automatiquement." },
+              { title: "04. Vous convertissez vos prospects en clients", description: "La machine commerciale va générer des réservations d'appels de qualification. À vous de jouer !" },
+            ].map((step, index) => (
+              <div key={index} style={{ backgroundColor: '#1f2937', color: 'white', padding: '20px', borderRadius: '8px' }}>
+                <h4 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>{step.title}</h4>
+                <p style={{ color: '#d1d5db' }}>{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section style={{ marginBottom: '60px' }}>
+          <h2 style={{ ...baseStyles.heroTitle, fontSize: '36px' }}>Clairs, nets et précis</h2>
+          <p style={{ ...baseStyles.heroText, marginBottom: '40px' }}>
+            Nos offres sont 100% personnalisées.<br />
+            Un besoin spécifique ? Nous y répondrons.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            {[
+              { title: "Basic", price: "3 199€", description: "La machine personnalisée" },
+              { title: "Pro", price: "4 399€", description: "La machine ultime" },
+            ].map((plan, index) => (
+              <div key={index} style={{ border: '1px solid #e5e7eb', borderRadius: '8px', padding: '20px' }}>
+                <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>{plan.title}</h3>
+                <p style={{ color: '#6b7280', marginBottom: '20px' }}>{plan.description}</p>
+                <p style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '20px' }}>{plan.price}</p>
+                <a href={calendlyLink} target="_blank" rel="noopener noreferrer">
+                  <button style={{...baseStyles.button, width: '100%'}}>
+                    Réservez un appel
+                  </button>
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <footer style={{ backgroundColor: '#f3f4f6', padding: '40px 0', marginTop: '60px' }}>
@@ -164,6 +208,10 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+      </footer>
+    </div>
+  )
+}
       </footer>
     </div>
   )
