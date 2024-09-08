@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const calendlyLink = "https://calendly.com/lamachinecommerciale/30min";
 
-  const data = [
-    { name: 'Jan', value: 4000 },
-    { name: 'Feb', value: 3000 },
-    { name: 'Mar', value: 5000 },
-    { name: 'Apr', value: 4500 },
-    { name: 'May', value: 6000 },
-    { name: 'Jun', value: 5500 },
+  const chartData = [
+    { month: 'Jan', value: 40 },
+    { month: 'Feb', value: 30 },
+    { month: 'Mar', value: 50 },
+    { month: 'Apr', value: 45 },
+    { month: 'May', value: 60 },
+    { month: 'Jun', value: 55 },
   ];
 
   return (
@@ -129,16 +128,19 @@ export default function LandingPage() {
 
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-center mb-12">Performance Chart</h2>
-          <ResponsiveContainer width="100%" height={400}>
-            <LineChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="value" stroke="#10b981" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
+          <div className="w-full h-64 bg-white border border-gray-200 rounded-lg p-4">
+            <div className="w-full h-full flex items-end justify-between">
+              {chartData.map((item, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <div 
+                    className="bg-emerald-400 w-8" 
+                    style={{height: `${item.value}%`}}
+                  ></div>
+                  <span className="mt-2 text-sm text-gray-600">{item.month}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
       </main>
 
