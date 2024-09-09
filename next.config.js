@@ -4,7 +4,9 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com', 'lamachinecommerciale.umso.co'],
+    unoptimized: true,
   },
+  output: 'export',
 }
 
 module.exports = nextConfig
