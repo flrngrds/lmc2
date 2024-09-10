@@ -8,7 +8,7 @@ export default function LandingPage() {
   const calendlyLink = "https://calendly.com/lamachinecommerciale/30min"
 
   const faqData = [
-    { question: "Est-ce que votre solution est adaptée au B2C", answer: "Notre solution pourra vous permettre de démarcher vos prospects B2C. En revanche, nous ne pourrons pas vous créer de base de prospects. Ce sera à vous de fournir une liste de clients potentiels." },
+    { question: "Est-ce que votre solution est adaptée au B2C ?", answer: "Notre solution pourra vous permettre de démarcher vos prospects B2C. En revanche, nous ne pourrons pas vous créer de base de prospects. Ce sera à vous de fournir une liste de clients potentiels." },
     { question: "J'ai déjà une base de prospects. Puis-je quand même mettre en place une machine commerciale ?", answer: "Absolument ! Nous standardiserons votre base et l'intégrerons dans l'outil pour que vos prospects rentrent dans la séquence d'emails." },
     { question: "Est-ce que notre équipe sera formée à votre solution ?", answer: "Évidemment ! Nous vous proposons une solution clé en main qui comprend une formation, une documentation et un support technique." },
     { question: "Quel est le délai de livraison ?", answer: "Votre machine commerciale sera prête sous 7 à 10 jours." },
