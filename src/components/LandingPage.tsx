@@ -250,7 +250,7 @@ export default function LandingPage() {
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-1/3 mb-8 md:mb-0">
               <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo%20LMC-d4ESebyC6u3CkwWE6BILkfkQ82hqZ1.png" alt="Logo" className="h-8 mb-2" />
-              <p className="text-sm text-white">© 2023 La Machine Commerciale</p>
+              <p className="text-sm text-white">© 2024 La Machine Commerciale</p>
             </div>
             <div className="w-full md:w-2/3 flex flex-wrap justify-end">
               <div className="w-full md:w-auto mb-8 md:mb-0 md:mr-12">
