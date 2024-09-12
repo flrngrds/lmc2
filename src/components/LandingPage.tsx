@@ -5,7 +5,7 @@ export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
-  const calendlyLink = "https://calendly.com/lamachinecommerciale/30min"
+  const calendlyLink = "https://koalendar.com/e/rencontrez-florian-lamachinecommerciale"
 
   const faqData = [
     { question: "Est-ce que votre solution est adaptée au B2C ?", answer: "Notre solution pourra vous permettre de démarcher vos prospects B2C. En revanche, nous ne pourrons pas vous créer de base de prospects. Ce sera à vous de fournir une liste de clients potentiels." },
